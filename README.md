@@ -11,12 +11,18 @@ This repository contains the solution for Pulse Oximeter and Heart-Rate Sensor I
 
 |Group        |Name|Description                                 |
 |-------------|----|--------------------------------------------|
-|Power        |VCC |1.8-3.3 V                                   |
+|Power        |VCC |1.8 - 5.5 V                                 |
 |Data exchange|SCL |I<sup>2</sup>C Clock Input                  |
 |Data exchange|SDA |I<sup>2</sup>C Clock Data (Open-Drain)      |
 |Data exchange|INT |Active-Low Interrupt (Open-Drain)           |
 |LED power    |IRD |Power Supply (Anode Connection) for IR LED. |
 |LED power    |RD  |Power Supply (Anode Connection) for Red LED.|
 |Power        |GND |Ground                                      |
+
+## Circuit diagram
+
+![Circuit diagram](Pictures/Circuit_diagram.jpg)
+
+More info about MAX30100 [here](https://www.analog.com/media/en/technical-documentation/data-sheets/max30100.pdf).
 
 ## Sequencing
