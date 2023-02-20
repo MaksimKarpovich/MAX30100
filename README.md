@@ -26,3 +26,28 @@ This repository contains the solution for Pulse Oximeter and Heart-Rate Sensor I
 More info about MAX30100 [here](https://www.analog.com/media/en/technical-documentation/data-sheets/max30100.pdf).
 
 ## Sequencing
+
+Using I<sup>2</sup>C:
+
+#### Initialize
+
+- wait until the interrupt pin becomes 0
+- send to Mode Configuration Register reset command
+    - send Mode Configuration Register address (0x06)
+    - send Mode reset command (0b01000000)
+- wait until the interrupt pin becomes 0
+- configure
+    - send register addresses
+    - send configure commands
+    - check that recieved data is equal to transmited
+
+#### Measuring
+
+- wait for interrupts to fire
+    - send Interrupt Status Register address (0x00)0x05
+    - recieve status. If status is equal 0b10010000 data is new.
+- read samples
+    - send FIFO Data Register address (0x05)
+    - recieve data
+
+#### Calculating
