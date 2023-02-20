@@ -33,8 +33,8 @@ Using I<sup>2</sup>C:
 
 - wait until the interrupt pin becomes 0
 - send to Mode Configuration Register reset command
-    - send Mode Configuration Register address (0x06)
-    - send Mode reset command (0b01000000)
+    - send Mode Configuration Register address (*0x06*)
+    - send Mode reset command (*0b01000000*)
 - wait until the interrupt pin becomes 0
 - configure
     - send register addresses
@@ -44,10 +44,10 @@ Using I<sup>2</sup>C:
 #### Measuring
 
 - wait for interrupts to fire
-    - send Interrupt Status Register address (0x00)0x05
+    - send Interrupt Status Register address (*0x00*)
     - recieve status. If status is equal 0b10010000 data is new.
 - read samples
-    - send FIFO Data Register address (0x05)
+    - send FIFO Data Register address (*0x05*)
     - recieve data
 
 #### Calculating
