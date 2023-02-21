@@ -51,3 +51,13 @@ Using I<sup>2</sup>C:
     - recieve data
 
 #### Calculating
+
+(It doesn't claim to be the best, but it works)
+
+- Scale IR LED data to full height
+- Filter IR LED data
+- Take the derivative of the IR LED data
+- Find beat
+- Scale Red LED data to full height
+- Filter Red LED data
+- Calculate SpO<sub>2</sub>
